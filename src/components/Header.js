@@ -35,7 +35,7 @@ export const Header = () => {
         <div className="flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={Logo} className="h-7" alt="Cinemate Logo" />
-            <span className="self-center text-2xl text-heading font-semibold whitespace-nowrap dark:text-white">Cinemate</span>
+            <span className="self-center text-2xl text-heading font-semibold whitespace-nowrap dark:text-white">Cinema Mate</span>
           </Link>
 
           {/* Partie du menu sur mobile */}
