@@ -1,0 +1,39 @@
+API Key : ebdf19d8f899bda652f96f85dc1f76a6
+Base Url : https://api.themoviedb.org/3
+
+
+Individual:
+https://api.themoviedb.org/3/movie/{movie_id}?api_key=ebdf19d8f899bda652f96f85dc1f76a6
+
+Now Playing:
+https://api.themoviedb.org/3/movie/now_playing?api_key=ebdf19d8f899bda652f96f85dc1f76a6
+
+Popular:
+https://api.themoviedb.org/3/movie/popular?api_key=ebdf19d8f899bda652f96f85dc1f76a6
+
+Top Rated:
+https://api.themoviedb.org/3/movie/top_rated?api_key=ebdf19d8f899bda652f96f85dc1f76a6
+
+Upcoming: 
+https://api.themoviedb.org/3/movie/upcoming?api_key=ebdf19d8f899bda652f96f85dc1f76a6
+
+Search:
+https://api.themoviedb.org/3/search/movie?api_key=ebdf19d8f899bda652f96f85dc1f76a6&query={movie_name}
+
+
+Search : 
+https://api.themoviedb.org/3/search/movie?api_key=ebdf19d8f899bda652f96f85dc1f76a6&language=en-US&page=1
+
+
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYmRmMTlkOGY4OTliZGE2NTJmOTZmODVkYzFmNzZhNiIsIm5iZiI6MTc2ODQ2NTk2NS42NzcsInN1YiI6IjY5NjhhNjJkYjg1Mzg0NTZiMjIzNjkwNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ys-pc6pgQ5by-HQUbpSk4PD2k5aeCzCJoT9StmT5ROA'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1', options)
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
